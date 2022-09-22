@@ -1,10 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.Specialized;
-using System.Linq;
-using System.Web;
 using System.Web.Mvc;
-using Amazon.S3;
 
 namespace MorpheusPoc.Controllers
 {
@@ -20,12 +17,12 @@ namespace MorpheusPoc.Controllers
                         };
 
             model.AdditionalData.Add(nameof(Request.UserHostAddress), Request.UserHostAddress);
-            
+
             model.AdditionalData.Add("Current Server Local Time", DateTimeOffset.Now.ToString());
-            
+
             return View(model);
         }
-        
+
         private IDictionary<string, string> GetValues(NameValueCollection col)
         {
             var values = new Dictionary<string, string>();
@@ -40,6 +37,5 @@ namespace MorpheusPoc.Controllers
 
             return values;
         }
-     
     }
 }
