@@ -1,0 +1,24 @@
+﻿@model IDictionary<string, string> 
+
+<div class="row-fluid">
+    <div class="span10 offset1">
+        <div style="font-weight: bold;">@ViewData["Caption"]</div>
+        <table class="table table-striped table-bordered">
+            <thead>
+            <tr>
+                <td>Name</td>
+                <td>Value</td>
+            </tr>
+            </thead>
+            <tbody>
+            @foreach (var item in Model.OrderBy(x => x.Key))
+            {
+                <tr>
+                    <td style="white-space: nowrap">@item.Key</td>
+                    <td>@item.Value</td>
+                </tr>
+            }
+            </tbody>
+        </table>
+    </div>
+</div>

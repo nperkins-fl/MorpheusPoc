@@ -1,0 +1,17 @@
+﻿@model MorpheusPoc.Controllers.ViewRequestViewModel
+
+@{
+    ViewBag.Title = "View Request";
+}
+
+<h1 class="pageHeader">
+    <small>@ViewBag.Title</small>
+</h1>
+
+@Html.DisplayFor(x => x.AdditionalData, "StringDictionary", new { Caption = "Additional Data" })
+
+@Html.DisplayFor(x => x.RequestHeaders, "StringDictionary", new { Caption = "Request Headers" })
+
+@Html.DisplayFor(x => x.ServerVariables, "StringDictionary", new { Caption = "Server Variables" })
+
+@Html.DisplayFor(x => x.ResponseHeaders, "StringDictionary", new { Caption = "Response Headers" })
