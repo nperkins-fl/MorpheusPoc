@@ -1,0 +1,29 @@
+﻿@model MorpheusPoc.Models.MeshCallViewModel
+
+@{
+    ViewBag.Title = "Mesh Call";
+}
+
+<h1 class="pageHeader">
+    <small>@ViewBag.Title</small>
+</h1>
+
+<dl>
+    <dt>Request Url</dt>
+    <dd>@ViewBag.RequestUrl</dd>
+</dl>
+
+<div class="row-fluid">
+    <div class="span 10 offset1">
+        <span style="font-weight:bold">Call made to: </span> @Model.Target
+    </div>
+    <div class="span 10 offset1">
+        <span style="font-weight:bold">Status Code: </span> @Model.StatusCode
+    </div>
+    <div class="span 10 offset1">
+        <span style="font-weight:bold">Content: </span> @Model.Content
+    </div>
+    <div class="span 10 offset1">
+        <span style="font-weight:bold">Error: </span> @Model.Error
+    </div>
+</div>

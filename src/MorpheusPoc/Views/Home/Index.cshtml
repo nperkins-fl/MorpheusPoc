@@ -1,4 +1,4 @@
-﻿@model MorpheusPoc.Controllers.ViewRequestViewModel
+﻿@model MorpheusPoc.Models.ViewRequestViewModel
 
 @{
     ViewBag.Title = "View Request";
@@ -7,6 +7,11 @@
 <h1 class="pageHeader">
     <small>@ViewBag.Title</small>
 </h1>
+
+<dl>
+    <dt>Request Url</dt>
+    <dd>@ViewBag.RequestUrl</dd>
+</dl>
 
 @Html.DisplayFor(x => x.AdditionalData, "StringDictionary", new { Caption = "Additional Data" })
 
