@@ -1,1 +1,0 @@
-This is the PR Template for the src folder, put information you want displayed here for changes to the documentation
